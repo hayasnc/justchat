@@ -54,7 +54,14 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'justchat.urls'
 
 ASGI_APPLICATION = 'justchat.routing.application'
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

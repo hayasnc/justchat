@@ -111,3 +111,6 @@ venv.bak/
 bin
 src/justchat/justchat.code-workspace
 src/chat/__pycache__
+*.pyc
+src/justchat/__pycache__/settings.cpython-38.pyc
+*.pyc
